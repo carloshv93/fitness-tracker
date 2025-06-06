@@ -28,11 +28,8 @@ export const CreateExerciseForm = ({onSubmit}: { onSubmit: (name: string, totalS
 
     const RegisterExerciseAction = createAction(onSubmit)
 
-    const [response, handleAddExercise, isPending] = useActionState<FormState, FormData>(RegisterExerciseAction, initialFormState)
+    const [_, handleAddExercise, isPending] = useActionState<FormState, FormData>(RegisterExerciseAction, initialFormState)
 
-    console.log({
-        message: response.message,
-    })
     return (
         <form action={handleAddExercise} style={{
             display: "flex",

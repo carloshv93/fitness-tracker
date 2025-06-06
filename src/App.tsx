@@ -8,11 +8,12 @@ import {Layout} from "./components/Layout.tsx";
 function App() {
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/fitness-tracker">
             <Routes>
                 <Route element={<Layout/>}>
                     <Route path="/" element={<Dashboard/>}/>
                     <Route path="/history" element={<History/>}/>
+                    <Route path="*" element={<History/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
