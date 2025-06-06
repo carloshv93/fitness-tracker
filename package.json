@@ -7,7 +7,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://<TU_USUARIO>.github.io/fitness-tracker",
+  "homepage": "https://carloshv93.github.io/fitness-tracker",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
