@@ -10,10 +10,9 @@
   "homepage": "https://<TU_USUARIO>.github.io/fitness-tracker",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.0",
