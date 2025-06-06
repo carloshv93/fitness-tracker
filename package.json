@@ -7,12 +7,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://carloshv93.github.io/fitness-tracker",
+  "homepage": "https://carloshv93.github.io/fitness-tracker/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist -r https://github.com/carloshv93/fitness-tracker.git"
   },
   "dependencies": {
     "react": "^19.1.0",
