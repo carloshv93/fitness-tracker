@@ -2,6 +2,11 @@ import {Outlet} from "react-router-dom";
 
 import {Navigation} from "./Navigation.tsx";
 import {Logo} from "./Logo.tsx";
+import {Suspense} from "react";
+import {Quote} from "./Quote.tsx";
+import {getQuotesByTag} from "../services";
+
+const promise = getQuotesByTag({tag: "motivational"})
 
 export const Layout = () => {
     return (
@@ -31,7 +36,10 @@ export const Layout = () => {
                 padding: "1rem",
                 borderTop: "1px solid #ccc",
             }}>
-                Developed by Carlos Herrera
+                <Suspense fallback={"loading motivation..."}>
+                    <Quote quotesPromise={promise}/>
+                </Suspense>
+                <p>Developed by Carlos Herrera</p>
             </footer>
         </div>
     )
